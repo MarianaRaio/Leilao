@@ -20,7 +20,7 @@ public class ProdutosDAO {
 
     public void cadastrarProduto(ProdutosDTO produto) {
 
-        // oioi
+        
         conn = new conectDAO().connectDB();
         try {
             prep = conn.prepareStatement("INSERT INTO produtos (nome, valor, status) VALUES (?,?,?)", Statement.RETURN_GENERATED_KEYS);
