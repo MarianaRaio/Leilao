@@ -1,0 +1,23 @@
+[33mcommit e57d14dc4e3dec8fc7055d2b4f582c031593bf2c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m
+Author: Mariana Raio <marianaraiooo@gmail.com>
+Date:   Tue Jun 25 22:45:24 2024 -0300
+
+    códigos inseridos para salvar produtos no banco
+
+[33mcommit 74e8d0426ba5806ce17ddaff8fdbeffd4f0df2c6[m
+Author: Mariana Raio <marianaraiooo@gmail.com>
+Date:   Tue Jun 25 21:37:14 2024 -0300
+
+    Inserido código na classe conectaDAO para conexão com o banco
+
+[33mcommit 1abfc6ff1e90c83bd8ade6d46491821a6f1e237a[m
+Author: Mariana Raio <marianaraiooo@gmail.com>
+Date:   Tue Jun 25 20:49:29 2024 -0300
+
+    cadastroVIEW como classe inicial
+
+[33mcommit e28c321b9275d150c61ecd4800362bb7888def53[m
+Author: Mariana Raio <marianaraiooo@gmail.com>
+Date:   Tue Jun 25 20:46:38 2024 -0300
+
+    Iniciando atividade 2 senac
