@@ -40,7 +40,7 @@ public class ProdutosDAO {
 
     }
 
-    public ArrayList<ProdutosDTO> listarProdutos() {
+    public ArrayList<ProdutosDTO> ListarProdutos() {
         listagem.clear();
 
         conn = new conectDAO().connectDB();
@@ -77,8 +77,21 @@ public class ProdutosDAO {
         }
         return listagem;
     }
-     public ArrayList<ProdutosDTO> listarProdutosVendidos() {
-        ArrayList<ProdutosDTO> produtosVendidos = new ArrayList<>();
+    public void VenderProduto(int id){
+        conn = new conectDAO().connectDB();
+        try{
+            prep = conn.prepareStatement("UPDATE produtos SET status = ? WHERE id = ?");
+            prep.setString(1, "Vendido");
+            prep.setInt(2, id);
+            
+            prep.executeUpdate();
+            JOptionPane.showMessageDialog(null, "Produto vendido com sucesso");
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+     public ArrayList<ProdutosDTO> ListarProdutosVendidos() {
+        ArrayList<ProdutosDTO> ProdutosVendidos = new ArrayList<>();
         conn = new conectDAO().connectDB();
         try {
             prep = conn.prepareStatement("SELECT * FROM produtos WHERE status = ?");
@@ -92,7 +105,7 @@ public class ProdutosDAO {
                 produto.setValor(resultset.getInt("valor"));
                 produto.setStatus(resultset.getString("status"));
 
-                produtosVendidos.add(produto);
+                ProdutosVendidos.add(produto);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -111,6 +124,7 @@ public class ProdutosDAO {
                 e.printStackTrace();
             }
         }
-        return produtosVendidos;
-    }
+        return ProdutosVendidos;
+     }
+               
 }
